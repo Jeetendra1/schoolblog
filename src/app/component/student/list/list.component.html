@@ -1,0 +1,25 @@
+<div class="alert alert-danger" *ngIf="error">
+    <p>{{error}}</p>
+  </div>
+
+<table class="table responsive" *ngIf="studentList.length > 0;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sdata of studentList; index as i">
+        <th scope="row">{{i}}</th>
+        <td>{{sdata.name}}</td>
+        <td>{{sdata.email}}</td>
+        <td>{{sdata.phone}}</td>
+        <td>{{sdata.address}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
